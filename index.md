@@ -1,13 +1,16 @@
 ---
 layout: page
 title: WhiteFaceHair
-tagline: 
-궁금한 건 세션 관리자 배포 글로 ㄱㄱ
-description: 레갤럼들을 위한 레드 데드 온라인 유틸리티
+tagline: 레갤럼들을 위한 배치파일
+description: By - WhiteFaceHair
 ---
 레드 데드 온라인 세션 관리자
+by. 디시인사이드 레드 데드 리뎀션2 갤러리
+    고정 닉네임 WhiteFaceHiar
 
 원하는 버전을 클릭하면 다운로드 링크로 이동 함.
+
+- [사용법/업데이트 내용](https://gall.dcinside.com/mgallery/board/view/?id=rdr2&no=219751&page=1)
 
 - [3.3.1 - 최신](https://pages.github.com)
 - [3.3](https://drive.google.com/u/0/uc?id=17O2Kr8IW4gr6ESDwk9zCuKNVBT6eQoUC&export=download)
