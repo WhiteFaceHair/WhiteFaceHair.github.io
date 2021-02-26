@@ -2,7 +2,7 @@
 layout: page
 title: by - WhiteFaceHair
 tagline: 레갤럼들을 위한 배치파일
-description: by - WhiteFaceHair
+description: 레데온 유틸리티
 ---
 
 레드 데드 온라인 세션 관리자
