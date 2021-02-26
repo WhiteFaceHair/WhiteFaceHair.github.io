@@ -11,14 +11,14 @@ description: by - WhiteFaceHair
 
 - [사용법/업데이트 내용](https://gall.dcinside.com/mgallery/board/view/?id=rdr2&no=219751&page=1)
 
-- [3.3.1 - 최신](https://pages.github.com)
+- [3.3.1 - 최신](https://drive.google.com/u/0/uc?id=1_qn4gDrS7N0CCnBNBTUQ0ns16lqCywxS&export=download)
 - [3.3](https://drive.google.com/u/0/uc?id=17O2Kr8IW4gr6ESDwk9zCuKNVBT6eQoUC&export=download)
 - [3.2](https://drive.google.com/u/0/uc?id=15XSqLfBBFAyllMPAzettIKMyL_XpKA55&export=download)
 - [3.1](https://drive.google.com/u/0/uc?id=1m4cW0rQ-64V_eAFYjxcJ-d5DWUl7mEfT&export=download)
 - [3.0.2](https://drive.google.com/u/0/uc?id=1lZz9bWvI0I5BQgqtk17_1MzyYBrFrLuF&export=download)
 - [3.0.1](https://drive.google.com/u/0/uc?id=1LPdUQsr-TLQHsRTHRuJmuyCDO-2ZHV5B&export=download)
 - [3.0](https://drive.google.com/u/0/uc?id=1J2QyPxSlIO9vBHO4UeWNhNAQooIvfWot&export=download)
-- [3.0b]
+- [3.0b](https://drive.google.com/u/0/uc?id=1OU7hQmRs6Poi7zUm_lXFLDcE_yISJ3CC&export=download)
 - [2.2](https://drive.google.com/u/0/uc?id=1wntsiQroF5sz6pkxDiA-D8gUByMj_zl5&export=download)
 - [2.1](https://drive.google.com/u/0/uc?id=18ZczvlfLDmHhlbLJ02I4Iv7yMGF9ARvx&export=download)
 - [2.0](https://drive.google.com/u/0/uc?id=1edzGqSW8wiAFbnYKcfq8SmFymKI7Nwns&export=download)
