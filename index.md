@@ -1,8 +1,8 @@
 ---
 layout: page
-title: by - WhiteFaceHair
+title: 레데온 배치파일 모음
 tagline: 레갤럼들을 위한 배치파일
-description: 레데온 유틸리티
+description: by - WhiteFaceHair
 ---
 레드 데드 온라인 세션 관리자
 - [사용법/업데이트 내용](https://gall.dcinside.com/mgallery/board/view/?id=rdr2&no=219751&page=1)
