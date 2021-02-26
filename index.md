@@ -4,9 +4,7 @@ title: by - WhiteFaceHair
 tagline: 레갤럼들을 위한 배치파일
 description: by - WhiteFaceHair
 ---
-원하는 버전을 클릭하면 다운로드 링크로 이동 함.
 
----
 레드 데드 온라인 세션 관리자
 - [사용법/업데이트 내용](https://gall.dcinside.com/mgallery/board/view/?id=rdr2&no=219751&page=1)
 
