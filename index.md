@@ -7,7 +7,7 @@ description: by - WhiteFaceHair
 레드 데드 온라인 세션 관리자
 - [사용법/업데이트 내용](https://gall.dcinside.com/mgallery/board/view/?id=rdr2&no=219751&page=1)
 
-- [3.3.1 - 최신](https://drive.google.com/u/0/uc?id=1_qn4gDrS7N0CCnBNBTUQ0ns16lqCywxS&export=download)
+- [3.3.1 - 최신버전](https://drive.google.com/u/0/uc?id=1_qn4gDrS7N0CCnBNBTUQ0ns16lqCywxS&export=download)
 - [3.3](https://drive.google.com/u/0/uc?id=17O2Kr8IW4gr6ESDwk9zCuKNVBT6eQoUC&export=download)
 - [3.2](https://drive.google.com/u/0/uc?id=15XSqLfBBFAyllMPAzettIKMyL_XpKA55&export=download)
 - [3.1](https://drive.google.com/u/0/uc?id=1m4cW0rQ-64V_eAFYjxcJ-d5DWUl7mEfT&export=download)
