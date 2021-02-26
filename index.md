@@ -1,72 +1,43 @@
 ---
 layout: page
-title: simple site
-tagline: Easy websites with GitHub Pages
-description: Minimal tutorial on making a simple website with GitHub Pages
+title: RDO 배치파일
+tagline: 궁금한거나 추가됐음 하는 거 또는 버그 제보는 세션 관리자 배포 글에 ㄱㄱ
+description: WhiteFaceHair
 ---
+레드 데드 온라인 세션 관리자
+원하는 버전을 클릭하면 다운로드 링크로 이동 함.
 
-[Github Pages](https://pages.github.com) provide a simple way to make a
-website using
-[Markdown](https://daringfireball.net/projects/markdown/) and
-[git](https://git-scm.com).
-
-For me, the painful aspects of making a website are
-
-- Working with html and css
-- Finding a hosting site
-- Transferring stuff to the hosting site
-
-With [GitHub Pages](https://pages.github.com), you just write things in
-[Markdown](https://daringfireball.net/projects/markdown/),
-[GitHub](https://github.com) hosts the site for you, and you just push
-material to your GitHub repository with `git add`, `git commit`, and
-`git push`.
-
-If you love [git](https://git-scm.com/) and
-[GitHub](https://github.com), you'll love
-[GitHub Pages](https://pages.github.com), too.
-
-The sites use [Jekyll](https://jekyllrb.com/), a
-[ruby](https://www.ruby-lang.org/en/) [gem](https://rubygems.org/), to
-convert Markdown files to html, and this part is done
-automatically when you push the materials to the `gh-pages` branch
-of a GitHub repository.
-
-The [GitHub](https://pages.github.com) and
-[Jekyll](https://jekyllrb.com) documentation is great, but I thought it
-would be useful to have a minimal tutorial, for those who just want to
-get going immediately with a simple site. To some readers, what GitHub
-has might be simpler and more direct.  But if you just want to create
-a site like the one you're looking at now, read on.
-
-Start by reading the [Overview page](pages/overview.html), which
-explains the basic structure of these sites. Then read
-[how to make an independent website](pages/independent_site.html). Then
-read any of the other things, such as
-[how to test your site locally](pages/local_test.html).
-
-- [Overview](pages/overview.html)
-- [Making an independent website](pages/independent_site.html)
-- [Making a personal site](pages/user_site.html)
-- [Making a site for a project](pages/project_site.html)
-- [Making a jekyll-free site](pages/nojekyll.html)
-- [Testing your site locally](pages/local_test.html)
-- [Resources](pages/resources.html)
-
-If anything here is confusing (or _wrong_!), or if I've missed
-important details, please
-[submit an issue](https://github.com/kbroman/simple_site/issues), or (even
-better) fork [the GitHub repository for this website](https://github.com/kbroman/simple_site),
-make modifications, and submit a pull request.
+- [3.3.1](https://pages.github.com)
+- [3.3](https://drive.google.com/u/0/uc?id=17O2Kr8IW4gr6ESDwk9zCuKNVBT6eQoUC&export=download)
+- [3.2](https://drive.google.com/u/0/uc?id=15XSqLfBBFAyllMPAzettIKMyL_XpKA55&export=download)
+- [3.1](https://drive.google.com/u/0/uc?id=1m4cW0rQ-64V_eAFYjxcJ-d5DWUl7mEfT&export=download)
+- [3.0.2](https://drive.google.com/u/0/uc?id=1lZz9bWvI0I5BQgqtk17_1MzyYBrFrLuF&export=download)
+- [3.0.1](https://drive.google.com/u/0/uc?id=1LPdUQsr-TLQHsRTHRuJmuyCDO-2ZHV5B&export=download)
+- [3.0](https://drive.google.com/u/0/uc?id=1J2QyPxSlIO9vBHO4UeWNhNAQooIvfWot&export=download)
+- [3.0b]
+- [2.2](https://drive.google.com/u/0/uc?id=1wntsiQroF5sz6pkxDiA-D8gUByMj_zl5&export=download)
+- [2.1](https://drive.google.com/u/0/uc?id=18ZczvlfLDmHhlbLJ02I4Iv7yMGF9ARvx&export=download)
+- [2.0](https://drive.google.com/u/0/uc?id=1edzGqSW8wiAFbnYKcfq8SmFymKI7Nwns&export=download)
+- [1.1](https://drive.google.com/u/0/uc?id=1wy-osPm-DnFo2l5J99wZxnDD7l11e2nA&export=download)
+- [1.0](https://drive.google.com/u/0/uc?id=15nLzu2rhmFWd1tOBYqQ553E9kasbfQdh&export=download)
 
 ---
+레드 데드 온라인 솔로세션 관리자
+- [다운로드](https://drive.google.com/u/0/uc?id=1u2UyL421M2Et4NbrwgI5DhC2BcroEG3l&export=download)
+- [사용법](https://gall.dcinside.com/mgallery/board/view?id=rdr2&no=204609)
+- 
+---
+레드 데드 온라인 임시 솔로세션 제작기
+- [다운로드](https://drive.google.com/u/1/uc?id=1EtKEU4TsPRwQ432GxRNtwayhwUNgiX7T&export=download)
+- [사용법](https://gall.dcinside.com/mgallery/board/view?id=rdr2&no=238681)
+- 
+---
+레드 데드 온라인 게임 볼륨 올려주는 배치파일
+- [다운로드](https://drive.google.com/u/1/uc?id=1leTRd7YPL1rfB75KjYLtvHZjbIrKpsQQ&export=download)
+- [사용법](https://gall.dcinside.com/mgallery/board/view?id=rdr2&no=233046)
+- 
+---
 
-The source for this minimal tutorial is [on github](https://github.com/kbroman/simple_site).
+레갤럼들 사랑하고 편하게 게임해라
 
-Also see my [tutorials](https://kbroman.org/tutorials) on
-[git/github](https://kbroman.org/github_tutorial),
-[GNU make](https://kbroman.org/minimal_make),
-[knitr](https://kbroman.org/knitr_knutshell),
-[R packages](https://kbroman.org/pkg_primer),
-[data organization](https://kbroman.org/dataorg),
-and [reproducible research](https://kbroman.org/steps2rr).
+뉴비 키워줘서 고마움
