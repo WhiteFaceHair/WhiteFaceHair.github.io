@@ -1,8 +1,8 @@
 ---
 layout: page
-title: By - WhiteFaceHair
+title: by - WhiteFaceHair
 tagline: 레갤럼들을 위한 배치파일
-description: By - WhiteFaceHair
+description: by - WhiteFaceHair
 ---
 레드 데드 온라인 세션 관리자
 
