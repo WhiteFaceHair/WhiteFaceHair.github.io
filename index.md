@@ -1,6 +1,6 @@
 ---
 layout: page
-title: By.WhiteFaceHair
+title: By - WhiteFaceHair
 tagline: 레갤럼들을 위한 배치파일
 description: By - WhiteFaceHair
 ---
