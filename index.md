@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 레데온 배치파일 모음
+title: by - WhiteFaceHair
 tagline: 레갤럼들을 위한 배치파일
 description: by - WhiteFaceHair
 ---
