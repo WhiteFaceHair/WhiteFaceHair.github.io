@@ -5,9 +5,10 @@ tagline: 레갤럼들을 위한 배치파일
 description: by - WhiteFaceHair
 ---
 원하는 버전을 클릭하면 다운로드 링크로 이동 함.
+
 ---
 레드 데드 온라인 세션 관리자
-
+---
 - [사용법/업데이트 내용](https://gall.dcinside.com/mgallery/board/view/?id=rdr2&no=219751&page=1)
 
 - [3.3.1 - 최신](https://drive.google.com/u/0/uc?id=1_qn4gDrS7N0CCnBNBTUQ0ns16lqCywxS&export=download)
@@ -26,16 +27,19 @@ description: by - WhiteFaceHair
 
 ---
 레드 데드 온라인 솔로세션 관리자
+---
 - [다운로드](https://drive.google.com/u/0/uc?id=1u2UyL421M2Et4NbrwgI5DhC2BcroEG3l&export=download)
 - [사용법](https://gall.dcinside.com/mgallery/board/view?id=rdr2&no=204609)
 
 ---
 레드 데드 온라인 임시 솔로세션 제작기
+---
 - [다운로드](https://drive.google.com/u/1/uc?id=1EtKEU4TsPRwQ432GxRNtwayhwUNgiX7T&export=download)
 - [사용법](https://gall.dcinside.com/mgallery/board/view?id=rdr2&no=238681)
 
 ---
 레드 데드 온라인 게임 볼륨 올려주는 배치파일
+---
 - [다운로드](https://drive.google.com/u/1/uc?id=1leTRd7YPL1rfB75KjYLtvHZjbIrKpsQQ&export=download)
 - [사용법](https://gall.dcinside.com/mgallery/board/view?id=rdr2&no=233046)
 
