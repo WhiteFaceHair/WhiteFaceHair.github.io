@@ -1,7 +1,7 @@
 ---
 layout: page
-title: RDO 배치파일
-tagline: \n궁금한거나 추가됐음 하는 거 또는 버그 제보는 세션 관리자 배포 글에 ㄱㄱ
+title: 레드 데드 온라인 배치파일 모음
+궁금한거나 추가됐음 하는 거 또는 버그 제보는 세션 관리자 배포 글에 ㄱㄱ
 description: WhiteFaceHair
 ---
 레드 데드 온라인 세션 관리자
