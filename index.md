@@ -1,14 +1,15 @@
 ---
 layout: page
-title: 레드 데드 온라인 배치파일 모음
-tagline: 궁금한 건 세션 관리자 배포 글로 ㄱㄱ
+title: WhiteFaceHair
+tagline: 
+궁금한 건 세션 관리자 배포 글로 ㄱㄱ
 description: WhiteFaceHair
 ---
 레드 데드 온라인 세션 관리자
 
 원하는 버전을 클릭하면 다운로드 링크로 이동 함.
 
-- [3.3.1](https://pages.github.com)
+- [3.3.1 - 최신](https://pages.github.com)
 - [3.3](https://drive.google.com/u/0/uc?id=17O2Kr8IW4gr6ESDwk9zCuKNVBT6eQoUC&export=download)
 - [3.2](https://drive.google.com/u/0/uc?id=15XSqLfBBFAyllMPAzettIKMyL_XpKA55&export=download)
 - [3.1](https://drive.google.com/u/0/uc?id=1m4cW0rQ-64V_eAFYjxcJ-d5DWUl7mEfT&export=download)
@@ -39,6 +40,6 @@ description: WhiteFaceHair
 
 ---
 
-레갤럼들 사랑하고 편하게 게임해라
+레갤럼들 사랑하고 즐겜해라
 
 뉴비 키워줘서 고마움
