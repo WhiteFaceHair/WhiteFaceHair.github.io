@@ -3,7 +3,7 @@ layout: page
 title: WhiteFaceHair
 tagline: 
 궁금한 건 세션 관리자 배포 글로 ㄱㄱ
-description: WhiteFaceHair
+description: 레갤럼들을 위한 레드 데드 온라인 유틸리티
 ---
 레드 데드 온라인 세션 관리자
 
