@@ -4,8 +4,11 @@ title: by - WhiteFaceHair
 tagline: 레갤럼들을 위한 배치파일 모음
 description: by - WhiteFaceHair
 ---
-궁금하거나 추가됐으면 좋겠는거, 버그 제보 등은 [세션 관리자 배포 글](https://gall.dcinside.com/mgallery/board/view/?id=rdr2&no=219751&page=1)에 부탁함.
-<br>학식이라 바빠서 답변 바로바로 못할 때가 많음.
+댓글 알림 아니면 레갤을 잘 안봄.
+
+궁금하거나 추가됐으면 좋겠는거, 버그 제보 등은 [세션 관리자 배포 글](https://gall.dcinside.com/mgallery/board/view/?id=rdr2&no=219751&page=1)의 댓글에 부탁함.
+
+학식이라 바로바로 답변 못할 때가 많음.
 
 ---
 
