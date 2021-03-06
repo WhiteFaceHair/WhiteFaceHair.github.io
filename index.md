@@ -4,6 +4,12 @@ title: by - WhiteFaceHair
 tagline: 레갤럼들을 위한 배치파일
 description: by - WhiteFaceHair
 ---
+궁금하거나 추가됐으면 좋겠는거, 버그 제보 등은 [세션 관리자 배포 글](https://gall.dcinside.com/mgallery/board/view/?id=rdr2&no=219751&page=1)에 부탁함.
+
+댓글 알림아니면 레갤 잘 안봄.
+
+---
+
 레드 데드 온라인 세션 관리자
 - [사용법/업데이트 내용](https://gall.dcinside.com/mgallery/board/view/?id=rdr2&no=219751&page=1)
 
@@ -20,7 +26,7 @@ description: by - WhiteFaceHair
 - [2.0](https://drive.google.com/u/0/uc?id=1edzGqSW8wiAFbnYKcfq8SmFymKI7Nwns&export=download)
 - [1.1](https://drive.google.com/u/0/uc?id=1wy-osPm-DnFo2l5J99wZxnDD7l11e2nA&export=download)
 - [1.0](https://drive.google.com/u/0/uc?id=15nLzu2rhmFWd1tOBYqQ553E9kasbfQdh&export=download)
-
+- 
 ---
 레드 데드 온라인 솔로세션 관리자
 - [다운로드](https://drive.google.com/u/0/uc?id=1u2UyL421M2Et4NbrwgI5DhC2BcroEG3l&export=download)
