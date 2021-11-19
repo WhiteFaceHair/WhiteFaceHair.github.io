@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WFH-SessionManager</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap');
+        @font-face
+        {
+            font-family: "RDR Lino";
+            src: url("../font/RDR Lino Regular.ttf");
+        }
+
+        #Header
+        {
+            color: crimson;
+            text-align: center;
+            font-family: "RDR Lino";
+        }
+
+        #Header a
+        {
+            color: black;
+            text-decoration: none;
+            text-decoration-color: crimson;
+        }
+
+        #Navi
+        {
+            text-align: center;
+        }
+
+        #Navi li
+        {
+            font-family: 'Noto Serif KR', serif;
+            list-style-type: none;
+            margin-left: 20px;
+            display: inline;
+        }
+        #Navi li a
+        {
+            text-decoration: none;
+        }
+        .Welcome
+        {
+            font-family: 'Noto Serif KR', serif;
+            text-align: center;
+        }
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        thead {
+            background-color: burlywood;
+            text-align: center;
+        }
+        td, th {
+            border: 1px solid black;
+        }
+        tbody tr:hover {
+            background-color:bisque;
+        }
+        .center
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1 id="Header"><a href="../index.html">WhiteFaceHair-NET</a></h1>
+    <h2 id="Header">Red Dead Redemption 2</h2>
+    <nav id="Navi">
+        <li><a href="../rdr2/SessionManager.html">세션 관리자</a></li>
+        <li>RID 추적기</li>
+        <li><a href="../rdr2/JuJuak">솔세주작기(RDR2, GTA5)</a></li>
+    </nav>
+</header>
+<section>
+    <article class="Welcome">
+        <br>
+    </article>
+</section>
+<table>
+    <thead>
+    <tr>
+        <th>날짜</th>
+        <th>버전</th>
+        <th>업데이트 내역</th>
+        <th>다운로드</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="center">21/11/19</td>
+        <td class="center">1.0</td>
+        <td>첫 출시 버전<br>
+            - RID -> Name 추가<br>
+            - Profile -> RID 추가
+        </td>
+        <td class="center"><a href="https://github.com/WhiteFaceHair/RDR2/releases/download/GetRID/GET_RID.exe">클릭</a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
