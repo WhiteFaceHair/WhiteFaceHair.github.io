@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiteFaceHair-NET</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+        @font-face {font-family: "RDR Lino"; src: url("RDR Lino Regular.ttf");}
+        #header {
+            text-align: center;
+            font-family: "RDR Lino";
+            font-size: 2ch;
+        }
+        #header h2 {
+            color: rgb(212, 37, 37);
+        }
+        #header a {
+            text-decoration: none;
+        }
+        #header a:visited {
+            color: black;
+        }
+        #header a:hover {
+            color:blueviolet;
+        }
+        #notice {
+            font-family: 'Nanum Myeongjo', serif;
+            text-align: center;
+            font-size: 26px;
+        }
+        p {
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 19px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1><a href=https://whitefacehair.github.io/rdr2>WhiteFaceHair-NET</a></h1>
+        <h2>How To Use New SessionManager</h2>
+    </div>
+    <hr>
+    <br>
+    <p id="notice"><strong>뉴 세션 관리자 사용법</strong></p></div> 
+    <br>
+    <div id="read">
+        <p>
+            * 솔로세션 = 자신만 접속할 수 있고 다른 누구도 (모더 포함) 접속할 수 없는 세션 <br>
+            * 코드세션 = 코드를 아는 사람들끼리만 접속할 수 있는 세션 (락갤의 화리세션 같은 것, 코드를 모른다면 모더도 접속 불가능.) <br>
+            * 방화벽세션 = 락스타 게임의 통신 포트를 차단시켜 만드는 솔로세션, 반듯이 세션에 접속 후 활성화 시켜야 함. <br>
+            <strong><br>-- 솔로/코드 세션으로 접속하는 법 <br><br></strong>
+            1. 게임이 실행 중이라면 완전히 종료한다. <br>
+            2. 세션 관리자에서 솔로세션 전환 또는 코드세션 전환을 누른다. <br>
+            2-1. 코드세션 전환을 눌렀다면 자신이 접속을 원하는 세션의 코드를 입력 후, 엔터 또는 코드세션 전환을 누른다. <br>
+            3. 게임을 실행한다.<br><br>
+            <strong>-- 방화벽 세션 사용 법 <br></strong>
+            <br>
+            1. 세션에 접속한다. <br>
+            2. 세션 관리자를 관리자 권한으로 실행 후, 방화벽 세션을 누른다. (세션 관리자 실행 파일을 우클릭 후 관리자 권한으로 실행.)<br>
+            <br>
+            *주의사항 : 방화벽 세션을 활성화 시킨 상태에서 세션을 옮기기나 스토리 임무 참여 등을 하면 튕기게 됨. <br>
+            세션이 옮겨지는 작업을 하기 전, 방화벽 세션을 비활성화 시키고 하길 바람.
+        </p>
+        <br>
+        <p id="notice"><strong>설정 설명</strong></p>
+        <p><br><br>
+            - 업데이트 확인 = 새 버전의 세션 관리자가 나왔는지 확인하는 버튼<br>
+            - 솔로세션 코드 설정 = 솔로세션의 코드를 자신이 원하는 코드로 재설정하는 버튼. <br>
+            - 프로그램 재설치 = 세션 관리자를 재설치하는 버튼(설정 값, 게임 경로 등 모든 데이터 초기화)<br>
+
+            <br>
+            - 자동으로 업데이트 확인 = 매 실행시 새 버전의 세션 관리자가 나왔는지 확인하는 옵션 <br>
+            - 항상 관리자 권한으로 실행 = 매 실행시 관리자 권한을 요구함. (방화벽 세션을 자주 사용한다면 키셈) <br>
+            - 프로그램 종료 시 방화벽 세션 비활성화 = 방화벽 세션이 활성화 된 상태로 프로그램을 종료하면 자동으로 방화벽 세션을 비활성화 시켜주는 옵션 <br>
+        </p>
+        <br>
+        <p id="notice"><strong>QnA</strong></p>
+        <p><br><br>
+            Q. 락스타 런쳐에서 파일변조 문구가 뜸 <br>
+            A. 코드를 작성할 때, 하이픈(-)을 입력했는 지 확인해야 함, 하이픈을 사용하지 않았는데도 뜬다면 무시하고 게임을 실행하면 됨.<br><br>
+            Q. 벤 가능성 <br>
+            A. 없다고 봄, 이 프로그램에서 사용하는 모드는 옛날부터 해외에서 써왔던 모드임. <br>
+            그리고 이 모드 사용으로 벤당했다는 사람은 아직까지 본 적이 없음.
+            <br><br>
+            Q. 세션 전환 시 오류가 발생함. <br>
+            A1. 액세스가 거부되었습니다 = 세션 관리자를 관리자 권한으로 실행해야 함.<br>
+            A2. 파일이 존재하지 않습니다 = 세션 관리자를 재설치하거나 게임경로를 다시 설정해줘야 함.<br>
+            A3. 기타 등등 다른 오류가 떴거나 위의 오류가 떴지만 해결이 안됨 = 세션 관리자 배포 글에 댓글 남겨주셈. <br><br>
+            Q. 솔로세션을 사용하면 FFFF나 unknown오류가 뜨지 않읍니까?<br>
+            A. ㅇㅇ 솔세쓰면 공개세션보다 튕기는 횟수가 매우매우 줄어듦. <br><br>
+            Q. "버전이 호환되지 않습니다" 오류가 발생함. <br>
+            A. 니가 그 사람과 다른 코드를 사용해서 그럼<br>그게 아니라면 코드세션에서 공개세션에 있는 유저에게 접속하려 했거나, 반대의 경우임. <br>
+            <strong>게임 플레이 중에 갑자기 오류가 떴다면 핵이 널 강제로 자기 세션으로 데려오려 해서 그럼</strong>
+            <br><br>
+            Q. 코드의 대소문자 구분 여부<br>
+            A. 구분 함, 스페이스바 부터 특수기호등 모든 문자가 같아야만 접속이 가능함. <br><br>
+            Q. 게임 경로가 설정이 안됨 (오류가 발생함) <br>
+            A1. 1.3 또는 2.0에서 게임 경로 설정 과정을 다시 만들려고 함. <br> 세션 관리자 배포 글에 댓글 남기면 도와 주겠음. <br>
+            A2. 구 세션 관리자를 사용하면 해결 수 있음. <a href=https://whitefacehair.github.io/CUIsmDownload.html>구 세션 관리자 다운로드</a><br><br>
+            Q. 캠프와 밀주 오두막이 자꾸 깜빡깜빡거리고 사라졌다 생겼다 함 <br>
+            A1. 세션 합치기 때문임, 방화벽 세션을 비활성화하면 해결 됨. <br>
+            A2. 그냥 기다리다 보면 다시 생김 <br>
+            A3. 방화벽 세션 말고 솔로세션이나 코드 세션으로 가면 괜찮음. <br><br>
+            Q. 원하는 기능이나 궁금한 점이 있음. <br>
+            A. 내 대답을 원한다면 갤에 글로 쓰지 말고 세션 관리자 배포 글에 댓글을 남겨주거나, 상단의 오픈채팅으로 톡 남겨주셈. <br><br>
+            Q. 바이러스와 백도어 논란에 대해서 <br>
+            A. 난 갤에 배포하는 배치파일/프로그램 들에 바이러스와 백도어를 넣은 적이 단 한 번도 없음. <br>불안하다면 디컴파일러 프로그램인 DotPeek을 사용해 프로그램을 디컴파일 후, 소스를 확인해보면 됨. <br>
+            따로 난독화를 하지 않아서 C# 특성상 소스 손실 1도 없이 깔끔하게 디컴파일 될 것임.
+        </p>
+    </div>
+</body>
+</html>
