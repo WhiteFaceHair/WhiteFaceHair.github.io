@@ -6,16 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WFH-SessionManager</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;700&display=swap');
+
         @font-face
         {
             font-family: "RDR Lino";
             src: url("../font/RDR Lino Regular.ttf");
         }
 
+        body {
+            margin: 0;
+            background-color: #f3eee6;
+            color: #222;
+            font-family: 'Noto Serif KR', serif;
+        }
+
+        header {
+            padding: 28px 15px 18px 15px;
+            background-color: #e5d6c0;
+            border-bottom: 2px solid #8b6f4e;
+            text-align: center;
+        }
+
         #Header
         {
+            margin: 8px 0;
             color: crimson;
             text-align: center;
             font-family: "RDR Lino";
@@ -30,6 +45,8 @@
 
         #Navi
         {
+            margin-top: 20px;
+            padding: 0;
             text-align: center;
         }
 
@@ -37,36 +54,166 @@
         {
             font-family: 'Noto Serif KR', serif;
             list-style-type: none;
-            margin-left: 20px;
+            margin: 0 10px;
             display: inline;
         }
+
         #Navi li a
         {
+            color: #333;
             text-decoration: none;
+            border-bottom: 1px solid #8b6f4e;
         }
+
+        #Navi li a:hover {
+            color: crimson;
+            border-bottom-color: crimson;
+        }
+
+        main {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 28px 16px 50px 16px;
+        }
+
         .Welcome
         {
+            margin-bottom: 28px;
+            padding: 18px 20px;
+            background-color: #fffaf2;
+            border: 1px solid #c7b28f;
             font-family: 'Noto Serif KR', serif;
             text-align: center;
+            line-height: 1.8;
         }
+
+        .Welcome h3 {
+            margin: 12px 0;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .Welcome a {
+            color: crimson;
+        }
+
         table {
-            border: 1px solid black;
+            width: 100%;
+            border: 1px solid #3a3025;
             border-collapse: collapse;
             margin-left: auto;
             margin-right: auto;
+            background-color: #fffaf2;
         }
-        thead {
-            background-color: burlywood;
-            text-align: center;
-        }
+
         td, th {
-            border: 1px solid black;
+            border: 1px solid #3a3025;
         }
-        tbody tr:hover {
-            background-color:bisque;
-        }
+
         .center {
             text-align: center;
+        }
+
+        .download-panel {
+            padding: 38px 24px 34px 24px;
+        }
+
+        .download-label {
+            margin: 0 0 10px 0;
+            color: #6b5a43;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .download-title {
+            margin: 0;
+            color: #111;
+            font-size: 34px;
+            line-height: 1.25;
+        }
+
+        .download-version {
+            margin: 12px 0 26px 0;
+            color: #5a4b38;
+            font-size: 15px;
+        }
+
+        .download-button {
+            display: inline-block;
+            min-width: 220px;
+            padding: 17px 38px;
+            background-color: crimson;
+            color: white;
+            font-size: 22px;
+            font-weight: 700;
+            text-decoration: none;
+            border: 2px solid #7a0018;
+            box-shadow: 3px 3px 0 #3a3025;
+        }
+
+        .download-button:hover {
+            background-color: #a80020;
+        }
+
+        .download-help {
+            margin: 24px 0 0 0;
+            color: #6b5a43;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .download-guide {
+            margin: 22px 0 0 0;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .download-guide a {
+            color: crimson;
+            text-decoration: underline;
+        }
+
+        .download-help a {
+            color: crimson;
+            text-decoration: underline;
+        }
+
+        .old-download {
+            margin-top: 18px;
+            font-size: 13px;
+        }
+
+        .old-download a {
+            color: #333;
+            text-decoration: underline;
+        }
+
+        .old-download a:hover {
+            color: crimson;
+        }
+
+        footer {
+            margin-top: 28px;
+            color: #7a6a55;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 600px) {
+            #Navi li {
+                display: block;
+                margin: 8px 0;
+            }
+
+            .download-title {
+                font-size: 28px;
+            }
+
+            .download-button {
+                min-width: 170px;
+                padding: 15px 28px;
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -80,100 +227,100 @@
         <li><a href="../rdr2/BlockModels.html">Block Models</a></li>
     </nav>
 </header>
-<section>
-    <article class="Welcome">
-        <br>
-        <h3>궁금한 점이나 건의사항은 <a href="https://gall.dcinside.com/mgallery/board/view/?id=rdr2&no=330746&page=1">세션관리자 배포 글</a>로<br><br>프로그램 다운로드/공유 시 반드시 <a href="https://whitefacehair.github.io/rdr2/SessionManager.html">이 사이트의 링크</a>로만 다운로드/공유해주시기 바랍니다.
-            <br>타 사이트에서 exe형태의 파일로 다운로드 받지 마십시오.</h3>
-        
-            <h3>코드세션으로 다른 사람들이 만나지지 않는다면 세션 관리자를 사용 중인 백신에 예외처리 후 세션 관리자를 재설치(설정 - 세션 관리자 재설치)하고 사용</h3>
-            <h3>또는 HOME 버튼을 눌러 만나려는 친구에게 '세션 참가' 버튼을 눌러 직접 세션에 참여하십시오.</h3>
-            <br>
-    </article>
-</section>
-<table>
-    <thead>
-    <tr>
-        <th>날짜</th>
-        <th>버전</th>
-        <th>업데이트 내역</th>
-        <th>다운로드</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td class="center">26/06/13</td>
-        <td class="center">TheAllNew<br>BETA</td>
-        <td>
-            - ui 및 여러 기능 재작성<br>
-            - 패킷 필터링 기반 방화벽 세션 추가<br><br>
-            버그나 건의 사항, 사용법 문의 등은 <a href="https://gall.dcinside.com/rdr2/633861">이 글의 댓글</a> 또는 whitefacehair@gmail.com 으로 연락 주시면 감사하겠습니다. <br>
-            [참고] 이전 버전의 세션 관리자와 코드세션 호환성에는 문제가 없습니다.
-        </td>
-        <td class="center"><a href="https://github.com/WhiteFaceHair/RDR2/releases/download/sm-theallnew/sessionmanager_260617.zip">클릭</a></td>
-    </tr>
-    </tbody>
-    <tbody>
-    <tr>
-        <td class="center">24/02/11</td>
-        <td class="center">#5</td>
-        <td>
-            - 세션 관리자 실행 시 CMD창이 켜진 채로 프로그램이 멈춰 있다면 메모장이 켜져있지 않은지 확인하십시오.<br>
-              또는 설정 - '세션 관리자 실행시 방화벽 세션 활성화 여부 확인' 옵션을 비활성화 하거나, <a href="https://github.com/WhiteFaceHair/RDR2/releases/download/SessionManager/SessionManager_5_disable_update_check.exe">이 곳</a>을 눌러 업데이트 확인이 없는 수정버전을 사용하십시오.<br><br>
-            
-            - 임시 솔로세션(솔세주작기) 단축키 기능 추가<br>
-            - North Shield 제거<br>
-            - 일부 컴퓨터에서 프로그램이 실행되지 않던 버그 수정<br>
-            [참고] 버전이 변경되어도 코드세션 호환성에는 문제가 없습니다.
-        </td>
-        <td class="center"><a href="https://github.com/WhiteFaceHair/RDR2/releases/download/SessionManager/SessionManager_5.exe">클릭</a></td>
-    </tr>
-    </tbody>
-    <tbody>
-    <tr>
-        <td class="center">22/01/24</td>
-        <td class="center">#4</td>
-        <td>
-            - North Shield 추가<br>
-            - 세션 전환 시 게임이 실행 중이라면 알림 창이 표시되게 변경<br>
-            [참고] 버전이 변경되어도 코드세션 호환성에는 문제가 없습니다.
-        </td>
-        <td class="center"><a href="https://github.com/WhiteFaceHair/RDR2/releases/download/SessionManager/SessionManager_4.exe">클릭</a></td>
-    </tr>
-    </tbody>
-    <tbody>
-    <tr>
-        <td class="center">21/12/19</td>
-        <td class="center">#3</td>
-        <td>
-            - 프로필 등록/수정 과정에서의 예외처리 추가<br>
-            (오류가 발생하면 세션 관리자를 사용중인 백신에 예외처리 해보셈)
-        </td>
-        <td class="center"><a href="https://github.com/WhiteFaceHair/RDR2/releases/download/SessionManager/SessionManager_3.exe">클릭</a></td>
-    </tr>
-    </tbody>
-    <tbody>
-    <tr>
-        <td class="center">21/12/15</td>
-        <td class="center">#2</td>
-        <td>
-            - 오타 수정<br>
-            - 에픽런처 사용 시 게임이 실행되지 않던 버그 수정<br>
-            (설정 - 프로필 수정 - 에픽런처를 체크 후 저장해야 정상 작동 함)
-        </td>
-        <td class="center"><a href="https://github.com/WhiteFaceHair/RDR2/releases/download/SessionManager/SessionManager_2.exe">클릭</a></td>
-    </tr>
-    </tbody>
-    <tbody>
-    <tr>
-        <td class="center">21/11/23</td>
-        <td class="center">#1</td>
-        <td>
-            - 첫 출시버전
-        </td>
-        <td class="center"><a href="https://github.com/WhiteFaceHair/RDR2/releases/download/SessionManager/SessionManager_1.exe">클릭</a></td>
-    </tr>
-    </tbody>
-</table>
+
+<main>
+    <section>
+        <article class="Welcome">
+            <h3>
+                프로그램 다운로드/공유 시 반드시
+                <a href="https://whitefacehair.github.io/rdr2/SessionManager.html">이 사이트의 링크</a>로만
+                다운로드/공유해주시기 바랍니다.
+                <br>
+                타 사이트에서 exe 형태의 파일로 다운로드 받지 마십시오.
+            </h3>
+        </article>
+    </section>
+
+    <table>
+        <tbody>
+        <tr>
+            <td class="center download-panel">
+                <p class="download-label">현재 버전</p>
+                <h2 class="download-title">TheAllNew Beta</h2>
+                <!-- ... existing code ... -->
+                <!-- ... existing code ... -->
+                <p class="download-version">
+                    다운로드 버전:
+                    <strong id="sessionManagerVersion">260617</strong>
+                </p>
+                <p>
+                    <a
+                            id="sessionManagerDownload"
+                            class="download-button"
+                            href="https://github.com/WhiteFaceHair/RDR2/releases/download/sm-theallnew/sessionmanager_260617.zip"
+                    >
+                        다운로드
+                    </a>
+                </p>
+                <p class="download-guide">
+                    <a href="https://gall.dcinside.com/rdr2/633861">사용법</a>
+                </p>
+                <p class="download-help">
+                    관련 문의는 사용법 페이지의 댓글 또는
+                    <a href="mailto:whitefacehair@gmail.com">whitefacehair@gmail.com</a>
+                    으로 연락주십시오.
+                </p>
+                <p class="old-download">
+                    <a href="https://github.com/WhiteFaceHair/RDR2/releases/download/SessionManager/SessionManager_5.exe">
+                        구버전 다운로드
+                    </a>
+                </p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        WhiteFaceHair-NET / RDR2 Session Manager
+    </footer>
+</main>
+
+<script>
+    const downloadLink = document.getElementById("sessionManagerDownload");
+    const versionText = document.getElementById("sessionManagerVersion");
+
+    fetch("https://api.github.com/repos/WhiteFaceHair/RDR2/releases/tags/sm-theallnew")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("GitHub API request failed");
+            }
+
+            return response.json();
+        })
+        .then(release => {
+            const latestAsset = release.assets
+                .map(asset => {
+                    const matched = asset.name.match(/^sessionmanager_(\d+)\.(zip|exe)$/i);
+
+                    if (!matched) {
+                        return null;
+                    }
+
+                    return {
+                        version: matched[1],
+                        versionNumber: Number(matched[1]),
+                        downloadUrl: asset.browser_download_url
+                    };
+                })
+                .filter(asset => asset !== null)
+                .sort((a, b) => b.versionNumber - a.versionNumber)[0];
+
+            if (latestAsset && latestAsset.downloadUrl) {
+                downloadLink.href = latestAsset.downloadUrl;
+                versionText.textContent = latestAsset.version;
+            }
+        })
+        .catch(() => {});
+</script>
 </body>
 </html>
