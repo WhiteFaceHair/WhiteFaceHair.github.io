@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,67 +7,203 @@
     <title>WhiteFaceHair-NET</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;700&display=swap');
+
         @font-face
         {
             font-family: "RDR Lino";
             src: url("font/RDR Lino Regular.ttf");
         }
 
+        body {
+            margin: 0;
+            background-color: #f3eee6;
+            color: #222;
+            font-family: 'Noto Serif KR', serif;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 60px 16px 85px 16px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid #8b6f4e;
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+        }
+
         #Header
         {
             font-family: 'Shadows Into Light', cursive;
-            font-size: 100px;
-            text-align: center;
+            font-size: 76px;
+            margin: 0 0 10px 0;
+            color: #111;
+            line-height: 1.1;
         }
 
         #Header2
         {
-            text-align: center;
+            margin: 0;
             font-family: "RDR Lino";
+            font-size: 28px;
+            color: crimson;
+            letter-spacing: 2px;
         }
 
-        #Navi
-        {
-            text-align: center;
+        /* Card Grid Layout */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
         }
 
-        #Navi li
-        {
-            font-family: 'Noto Serif KR', serif;
-            list-style-type: none;
-            margin-left: 20px;
-            display: inline;
-            font-weight: bold;
-        }
-        #Navi li a
-        {
+        .card-link {
             text-decoration: none;
+            color: inherit;
+            display: block;
         }
-        .Welcome
-        {
-            font-family: 'Noto Serif KR', serif;
+
+        .card {
+            background-color: #fffaf2;
+            border: 2px solid #3a3025;
+            padding: 45px 20px;
+            box-shadow: 4px 4px 0 #3a3025;
+            transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80px;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            background-color: crimson;
+            border-color: #7a0018;
+            box-shadow: 7px 7px 0 #3a3025;
+        }
+
+        .card-title {
+            margin: 0;
+            font-family: 'Noto Serif KR', serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: crimson;
+            transition: color 0.2s ease;
+        }
+
+        .card:hover .card-title {
+            color: white;
+        }
+
+        /* Bottom Info Section */
+        .info-section {
+            margin-top: 70px;
+            text-align: center;
+        }
+
+        .info-card {
+            background-color: #fffaf2;
+            border: 1px solid #c7b28f;
+            padding: 28px 24px;
+            max-width: 650px;
+            margin: 0 auto;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.02);
+        }
+
+        .info-card h3 {
+            margin: 0 0 12px 0;
+            font-size: 18px;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .info-card p {
+            margin: 0 0 18px 0;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .email-link {
+            color: crimson;
+            font-weight: 700;
+            text-decoration: underline;
+            font-size: 16px;
+        }
+
+        .email-link:hover {
+            color: #a80020;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                padding-top: 40px;
+            }
+
+            #Header {
+                font-size: 52px;
+            }
+
+            #Header2 {
+                font-size: 20px;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .card {
+                padding: 35px 20px;
+            }
         }
     </style>
 </head>
 <body>
-<header>
-    <h1 id="Header">WhiteFaceHair-NET</h1>
-    <br>
-    <h2 id="Header2">Red Dead Redemption 2</h2>
-    <nav id="Navi">
-        <li><a href="rdr2/SessionManager.html">세션 관리자</a></li>
-        <li><a href="rdr2/JuJuak.html">솔세주작기(RDR2, GTA5)</a></li>
-        <li><a href="rdr2/BlockModels.html">Block Models</a></li>
-    </nav>
-</header>
-<section>
-    <article class="Welcome">
-        <br><br>
-        <h3>궁금한 점이나 건의 사항등은 whitefacehair@gmail.com으로 메일 바랍니다.</h3>
-    </article>
-</section>
+<div class="container">
+    <header>
+        <h1 id="Header">WhiteFaceHair-NET</h1>
+        <h2 id="Header2">Red Dead Redemption 2</h2>
+    </header>
+
+    <main>
+        <div class="card-grid">
+            <!-- Card 1 -->
+            <a href="rdr2/SessionManager.html" class="card-link">
+                <div class="card">
+                    <h2 class="card-title">세션 관리자</h2>
+                </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="rdr2/JuJuak.html" class="card-link">
+                <div class="card">
+                    <h2 class="card-title">솔세주작기</h2>
+                </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="rdr2/BlockModels.html" class="card-link">
+                <div class="card">
+                    <h2 class="card-title">Block Models</h2>
+                </div>
+            </a>
+        </div>
+
+        <section class="info-section">
+            <div class="info-card">
+                <h3>문의 및 버그 피드백</h3>
+                <p>궁금한 점이나 건의 사항등은 아래의 주소로 메일 바랍니다.</p>
+                <a href="mailto:whitefacehair@gmail.com" class="email-link">whitefacehair@gmail.com</a>
+            </div>
+        </section>
+    </main>
+</div>
 </body>
 </html>

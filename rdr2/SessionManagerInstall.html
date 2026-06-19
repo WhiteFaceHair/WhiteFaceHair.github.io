@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WFH-SessionManager 설치법</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;700&display=swap');
+
+        @font-face
+        {
+            font-family: "RDR Lino";
+            src: url("../font/RDR Lino Regular.ttf");
+        }
+
+        body {
+            margin: 0;
+            background-color: #f3eee6;
+            color: #222;
+            font-family: 'Noto Serif KR', serif;
+        }
+
+        header {
+            padding: 28px 15px 18px 15px;
+            background-color: #e5d6c0;
+            border-bottom: 2px solid #8b6f4e;
+            text-align: center;
+        }
+
+        #Header
+        {
+            margin: 8px 0;
+            color: crimson;
+            text-align: center;
+            font-family: "RDR Lino";
+        }
+
+        #Header a
+        {
+            color: black;
+            text-decoration: none;
+            text-decoration-color: crimson;
+        }
+
+        #Navi
+        {
+            margin-top: 20px;
+            padding: 0;
+            text-align: center;
+        }
+
+        #Navi li
+        {
+            font-family: 'Noto Serif KR', serif;
+            list-style-type: none;
+            margin: 0 10px;
+            display: inline;
+        }
+
+        #Navi li a
+        {
+            color: #333;
+            text-decoration: none;
+            border-bottom: 1px solid #8b6f4e;
+        }
+
+        #Navi li a:hover {
+            color: crimson;
+            border-bottom-color: crimson;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 28px 16px 50px 16px;
+        }
+
+        .Welcome
+        {
+            margin-bottom: 30px;
+            padding: 24px 20px;
+            background-color: #fffaf2;
+            border: 1px solid #c7b28f;
+            text-align: center;
+            line-height: 1.8;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .Welcome h3 {
+            margin: 0 0 8px 0;
+            font-size: 20px;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .Welcome p {
+            margin: 0;
+            color: #555;
+            font-size: 15px;
+        }
+
+        /* Tab Styles */
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 35px;
+            border-bottom: 2px solid #3a3025;
+            gap: 8px;
+        }
+
+        .tab-btn {
+            font-family: 'Noto Serif KR', serif;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 12px 24px;
+            border: 2px solid #3a3025;
+            border-bottom: none;
+            background-color: #fffaf2;
+            color: #3a3025;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 2px -2px 0 rgba(0,0,0,0.05);
+            outline: none;
+        }
+
+        .tab-btn:hover {
+            background-color: #eee5d8;
+        }
+
+        .tab-btn.active {
+            background-color: crimson;
+            color: white;
+            border-color: #3a3025;
+            box-shadow: none;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.45s ease forwards;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Steps Layout */
+        .step-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .step-card {
+            background-color: #fffaf2;
+            border: 1px solid #3a3025;
+            padding: 28px;
+            box-shadow: 3px 3px 0 #3a3025;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 5px 5px 0 #3a3025;
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #8b6f4e;
+            padding-bottom: 12px;
+        }
+
+        .step-number {
+            background-color: crimson;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid #7a0018;
+            box-shadow: 1px 1px 0 #3a3025;
+            flex-shrink: 0;
+        }
+
+        .step-title {
+            margin: 0;
+            font-size: 19px;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .step-description {
+            font-size: 15px;
+            line-height: 1.7;
+            margin: 0 0 24px 0;
+            color: #333;
+        }
+
+        .step-description strong {
+            color: crimson;
+        }
+
+        .step-description code {
+            background-color: #eee5d8;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: inherit;
+            font-weight: 700;
+            font-size: 14px;
+            border: 1px solid #c7b28f;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .image-box {
+            flex: 1 1 350px;
+            max-width: 100%;
+            text-align: center;
+            border: 1px solid #c7b28f;
+            background-color: #fcf8f2;
+            padding: 10px;
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #eedec7;
+            transition: transform 0.2s ease;
+        }
+
+        .image-box img:hover {
+            transform: scale(1.02);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #6b5a43;
+            font-weight: 700;
+        }
+
+        /* Action Buttons */
+        .action-area {
+            margin-top: 50px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            min-width: 180px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 3px 3px 0 #3a3025;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: crimson;
+            color: white;
+            border: 2px solid #7a0018;
+        }
+
+        .btn-primary:hover {
+            background-color: #a80020;
+        }
+
+        .btn-secondary {
+            background-color: #fffaf2;
+            color: #3a3025;
+            border: 2px solid #3a3025;
+        }
+
+        .btn-secondary:hover {
+            background-color: #eee5d8;
+        }
+
+        footer {
+            margin-top: 48px;
+            padding-top: 20px;
+            border-top: 1px solid #c7b28f;
+            color: #7a6a55;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 600px) {
+            #Navi li {
+                display: block;
+                margin: 8px 0;
+            }
+
+            .tabs-container {
+                flex-direction: column;
+                gap: 5px;
+                border-bottom: none;
+            }
+
+            .tab-btn {
+                border-bottom: 2px solid #3a3025;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .step-card {
+                padding: 18px;
+            }
+
+            .step-title {
+                font-size: 17px;
+            }
+
+            .image-gallery {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1 id="Header"><a href="../index.html">WhiteFaceHair-NET</a></h1>
+    <h2 id="Header">Red Dead Redemption 2</h2>
+    <nav id="Navi">
+        <li><a href="../rdr2/SessionManager.html">세션 관리자</a></li>
+        <li><a href="../rdr2/JuJuak.html">솔세주작기(RDR2, GTA5)</a></li>
+        <li><a href="../rdr2/BlockModels.html">Block Models</a></li>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <article class="Welcome">
+            <h3>RDR2 세션 관리자 설치 가이드</h3>
+            <p>윈도우 디펜더에 의해 업데이트가 실패하는 것을 방지하기 위한 설치법입니다.<br>현재 상황에 맞게 탭을 선택하여 진행해 주세요.</p>
+        </article>
+    </section>
+
+    <!-- Tab Buttons -->
+    <div class="tabs-container">
+        <button class="tab-btn active" onclick="openTab(event, 'new-install')">처음 설치하는 경우 (신규 설치)</button>
+        <button class="tab-btn" onclick="openTab(event, 'existing-file')">이미 다운로드 하여 사용중인 경우 (기존 사용자)</button>
+    </div>
+
+    <!-- Tab 1: New Install -->
+    <div id="new-install" class="tab-content active">
+        <div class="step-container">
+            <!-- Step 1 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">바탕 화면에 전용 폴더 생성</h3>
+                </div>
+                <p class="step-description">
+                    바탕 화면의 빈 공간을 마우스 우클릭한 후 <strong>[새로 만들기] ➔ [폴더]</strong>를 선택합니다.<br>
+                    생성된 새 폴더의 이름을 <code>세션관리자</code>로 변경합니다.
+                </p>
+                <div class="image-gallery">
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/0.png" alt="새 폴더 생성">
+                        <div class="image-caption">우클릭 후 새로 만들기 - 폴더 선택</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/1.png" alt="폴더명 지정">
+                        <div class="image-caption">폴더명을 '세션관리자'로 변경</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Windows 보안 앱 검색 및 실행</h3>
+                </div>
+                <p class="step-description">
+                    키보드에서 <strong>[Windows키 + S]</strong> 또는, Windows 작업 표시줄의 시작 단추나 검색창을 클릭한 후 <strong>보안</strong>을 입력합니다.<br>
+                    검색 결과 상단에 나타나는 <strong>Windows 보안</strong> 앱을 클릭하여 실행합니다.
+                </p>
+                <div class="image-gallery">
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/2.png" alt="검색창 열기">
+                        <div class="image-caption">시작 또는 검색창 활성화</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/3.png" alt="Windows 보안 검색">
+                        <div class="image-caption">'보안' 검색 후 Windows 보안 앱 클릭</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">제외 설정 메뉴로 이동</h3>
+                </div>
+                <p class="step-description">
+                    Windows 보안 앱 화면 왼쪽의 방패 모양 아이콘인 <strong>바이러스 및 위협 방지</strong> 탭을 클릭합니다.<br>
+                    그 후 오른쪽 화면을 아래로 스크롤하여 <strong>[제외]</strong> 항목 하단의 <strong>제외 추가 또는 제거</strong>를 클릭합니다.
+                </p>
+                <div class="image-gallery">
+                    <div class="image-box" style="flex: 1 1 100%; max-width: 600px; margin: 0 auto;">
+                        <img src="./SessionManagerInstall/5.png" alt="제외 추가 또는 제거 클릭">
+                        <div class="image-caption">바이러스 및 위협 방지 ➔ 제외 추가 또는 제거 선택</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">세션관리자 폴더를 제외 대상으로 추가</h3>
+                </div>
+                <p class="step-description">
+                    <strong>[+ 제외 사항 추가]</strong> 버튼을 누르고 드롭다운에서 <strong>폴더</strong>를 선택합니다.<br>
+                    폴더 선택 대화상자에서 바탕 화면에 만들었던 <code>세션관리자</code> 폴더를 선택하고 <strong>[폴더 선택]</strong>을 누릅니다.<br>
+                    제외 목록에 <code>C:\Users\User\Desktop\세션관리자</code>가 올바르게 등록되었는지 녹색 상자처럼 확인합니다.
+                </p>
+                <div class="image-gallery">
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/7.png" alt="제외 사항 추가">
+                        <div class="image-caption">제외 사항 추가 ➔ 폴더 클릭</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/8.png" alt="폴더 선택">
+                        <div class="image-caption">바탕 화면의 세션관리자 폴더 지정</div>
+                    </div>
+                    <div class="image-box" style="flex: 1 1 100%; max-width: 600px; margin: 0 auto;">
+                        <img src="./SessionManagerInstall/9.png" alt="제외 등록 완료 확인">
+                        <div class="image-caption">제외 폴더 목록에 정상 등록된 상태 확인</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">5</div>
+                    <h3 class="step-title">세션 관리자 파일 다운로드</h3>
+                </div>
+                <p class="step-description">
+                    세션 관리자 다운로드 페이지로 이동한 후, 화면 중앙의 빨간색 <strong>다운로드</strong> 버튼을 눌러 최신 압축 파일(`.zip`)을 저장합니다.
+                </p>
+                <div class="image-gallery">
+                    <div class="image-box" style="flex: 1 1 100%; max-width: 600px; margin: 0 auto;">
+                        <img src="./SessionManagerInstall/10.png" alt="다운로드 버튼 클릭">
+                        <div class="image-caption">웹사이트 메인의 다운로드 버튼 클릭</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">6</div>
+                    <h3 class="step-title">다운로드한 파일을 제외 폴더로 이동</h3>
+                </div>
+                <p class="step-description">
+                    웹 브라우저를 통해 다운로드한 압축 파일(예: <code>sessionmanager_260617.zip</code>)을 복사하거나 잘라내어,<br>
+                    방금 제외 설정으로 등록했던 바탕 화면의 <code>세션관리자</code> 폴더 내부로 이동시킵니다.
+                </p>
+                <div class="image-gallery">
+                    <div class="image-box" style="flex: 1 1 100%; max-width: 600px; margin: 0 auto;">
+                        <img src="./SessionManagerInstall/11.png" alt="파일 이동 확인">
+                        <div class="image-caption">세션관리자 폴더에 압축 파일 저장</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">7</div>
+                    <h3 class="step-title">압축 해제 진행</h3>
+                </div>
+                <p class="step-description">
+                    폴더 안의 압축 파일을 마우스 우클릭하고 <strong>[압축 풀기...]</strong>를 클릭합니다.<br>
+                    압축 해제 대상 폴더의 경로가 <code>C:\Users\User\Desktop\세션관리자</code>인지 확인한 뒤, 하단의 <strong>[압축 풀기(E)]</strong> 버튼을 클릭합니다.
+                </p>
+                <div class="image-gallery">
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/12.png" alt="압축 풀기 우클릭">
+                        <div class="image-caption">압축 파일 우클릭 ➔ 압축 풀기 선택</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/13.png" alt="압축 해제 경로 지정">
+                        <div class="image-caption">경로 확인 후 압축 풀기 실행</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 8 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">8</div>
+                    <h3 class="step-title">바로 가기 아이콘 생성 및 실행 완료</h3>
+                </div>
+                <p class="step-description">
+                    압축이 완료되면 나타나는 파일 목록 중 <strong>sessionmanager.exe</strong> 파일이 정상 압축 해제되었는지 확인합니다.<br>
+                    매번 폴더를 열지 않고 편리하게 실행할 수 있도록, 해당 파일을 우클릭하여 <strong>[추가 옵션 표시] ➔ [보내기(N)] ➔ [바탕 화면에 바로 가기 만들기]</strong>를 차례대로 클릭합니다.<br>
+                    바탕 화면에 생성된 바로 가기(단축) 아이콘을 통해 프로그램을 안전하게 실행해 사용하실 수 있습니다.
+                </p>
+                <div class="image-gallery">
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/14.png" alt="압축 해제 파일 확인">
+                        <div class="image-caption">압축 해제된 sessionmanager.exe 확인</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/15.png" alt="추가 옵션 표시">
+                        <div class="image-caption">exe 파일 우클릭 ➔ 추가 옵션 표시 클릭</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/16.png" alt="바탕 화면에 바로 가기 만들기">
+                        <div class="image-caption">보내기 ➔ 바탕 화면에 바로 가기 만들기 선택</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/17.png" alt="바로가기 완성">
+                        <div class="image-caption">바탕 화면에 생성된 단축 아이콘으로 실행</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab 2: Existing File (Already Extracted) -->
+    <div id="existing-file" class="tab-content">
+        <div class="step-container">
+            <!-- Step 1 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">바탕 화면에 전용 폴더 생성</h3>
+                </div>
+                <p class="step-description">
+                    바탕 화면의 빈 공간을 마우스 우클릭한 후 <strong>[새로 만들기] ➔ [폴더]</strong>를 선택합니다.<br>
+                    생성된 새 폴더의 이름을 <code>세션관리자</code>로 변경합니다.
+                </p>
+                <div class="image-gallery">
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/0.png" alt="새 폴더 생성">
+                        <div class="image-caption">우클릭 후 새로 만들기 - 폴더 선택</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/1.png" alt="폴더명 지정">
+                        <div class="image-caption">폴더명을 '세션관리자'로 변경</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Windows 보안 앱 검색 및 실행</h3>
+                </div>
+                <p class="step-description">
+                    키보드에서 <strong>[Windows키 + S]</strong> 또는, Windows 작업 표시줄의 시작 단추나 검색창을 클릭한 후 <strong>보안</strong>을 입력합니다.<br>
+                    검색 결과 상단에 나타나는 <strong>Windows 보안</strong> 앱을 클릭하여 실행합니다.
+                </p>
+                <div class="image-gallery">
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/2.png" alt="검색창 열기">
+                        <div class="image-caption">시작 또는 검색창 활성화</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/3.png" alt="Windows 보안 검색">
+                        <div class="image-caption">'보안' 검색 후 Windows 보안 앱 클릭</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">제외 설정 메뉴로 이동</h3>
+                </div>
+                <p class="step-description">
+                    Windows 보안 앱 화면 왼쪽의 방패 모양 아이콘인 <strong>바이러스 및 위협 방지</strong> 탭을 클릭합니다.<br>
+                    그 후 오른쪽 화면을 아래로 스크롤하여 <strong>[제외]</strong> 항목 하단의 <strong>제외 추가 또는 제거</strong>를 클릭합니다.
+                </p>
+                <div class="image-gallery">
+                    <div class="image-box" style="flex: 1 1 100%; max-width: 600px; margin: 0 auto;">
+                        <img src="./SessionManagerInstall/5.png" alt="제외 추가 또는 제거 클릭">
+                        <div class="image-caption">바이러스 및 위협 방지 ➔ 제외 추가 또는 제거 선택</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">세션관리자 폴더를 제외 대상으로 추가</h3>
+                </div>
+                <p class="step-description">
+                    <strong>[+ 제외 사항 추가]</strong> 버튼을 누르고 드롭다운에서 <strong>폴더</strong>를 선택합니다.<br>
+                    폴더 선택 대화상자에서 바탕 화면에 만들었던 <code>세션관리자</code> 폴더를 선택하고 <strong>[폴더 선택]</strong>을 누릅니다.<br>
+                    제외 목록에 <code>C:\Users\User\Desktop\세션관리자</code>가 올바르게 등록되었는지 녹색 상자처럼 확인합니다.
+                </p>
+                <div class="image-gallery">
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/7.png" alt="제외 사항 추가">
+                        <div class="image-caption">제외 사항 추가 ➔ 폴더 클릭</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/8.png" alt="폴더 선택">
+                        <div class="image-caption">바탕 화면의 세션관리자 폴더 지정</div>
+                    </div>
+                    <div class="image-box" style="flex: 1 1 100%; max-width: 600px; margin: 0 auto;">
+                        <img src="./SessionManagerInstall/9.png" alt="제외 등록 완료 확인">
+                        <div class="image-caption">제외 폴더 목록에 정상 등록된 상태 확인</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">5</div>
+                    <h3 class="step-title">이미 압축 해제된 파일들을 제외 폴더로 이동</h3>
+                </div>
+                <p class="step-description">
+                    이미 다운로드 받아 압축을 해제해 둔 세션 관리자 파일들(실행 파일 <code>sessionmanager.exe</code>, 각종 dll 파일 등 구성 파일 전체)을 모두 복사하거나 잘라내어,<br>
+                    방금 제외 설정으로 등록했던 바탕 화면의 <code>세션관리자</code> 폴더 내부로 모두 이동시킵니다.
+                </p>
+                <div class="image-gallery">
+                    <div class="image-box" style="flex: 1 1 100%; max-width: 600px; margin: 0 auto;">
+                        <img src="./SessionManagerInstall/14.png" alt="압축 해제 파일 이동 확인">
+                        <div class="image-caption">세션관리자 폴더에 압축 해제된 전체 구성 파일 저장</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">6</div>
+                    <h3 class="step-title">바로 가기 아이콘 생성 및 실행 완료</h3>
+                </div>
+                <p class="step-description">
+                    매번 폴더를 열지 않고 편리하게 실행할 수 있도록, 폴더 안의 <strong>sessionmanager.exe</strong> 파일을 우클릭하여<br>
+                    <strong>[추가 옵션 표시] ➔ [보내기(N)] ➔ [바탕 화면에 바로 가기 만들기]</strong>를 차례대로 클릭합니다.<br>
+                    바탕 화면에 생성된 바로 가기(단축) 아이콘을 통해 프로그램을 안전하게 실행해 사용하실 수 있습니다.
+                </p>
+                <div class="image-gallery">
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/15.png" alt="추가 옵션 표시">
+                        <div class="image-caption">exe 파일 우클릭 ➔ 추가 옵션 표시 클릭</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/16.png" alt="바탕 화면에 바로 가기 만들기">
+                        <div class="image-caption">보내기 ➔ 바탕 화면에 바로 가기 만들기 선택</div>
+                    </div>
+                    <div class="image-box">
+                        <img src="./SessionManagerInstall/17.png" alt="바로가기 완성">
+                        <div class="image-caption">바탕 화면에 생성된 단축 아이콘으로 실행</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-area">
+        <a href="./SessionManager.html" class="btn btn-primary">다운로드 페이지로 가기</a>
+        <a href="../index.html" class="btn btn-secondary">메인 홈으로 가기</a>
+    </div>
+
+    <footer>
+        WhiteFaceHair-NET / RDR2 Session Manager Installation Guide
+    </footer>
+</main>
+
+<script>
+    function openTab(evt, tabId) {
+        // Hide all tab contents
+        const tabContents = document.getElementsByClassName("tab-content");
+        for (let i = 0; i < tabContents.length; i++) {
+            tabContents[i].classList.remove("active");
+        }
+
+        // Deactivate all tab buttons
+        const tabButtons = document.getElementsByClassName("tab-btn");
+        for (let i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+
+        // Show the current tab and activate the button
+        document.getElementById(tabId).classList.add("active");
+        evt.currentTarget.classList.add("active");
+        
+        // Scroll to tab section smoothly
+        document.querySelector('.tabs-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+</script>
+</body>
+</html>
